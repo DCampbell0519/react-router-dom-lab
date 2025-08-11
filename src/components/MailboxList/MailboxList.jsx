@@ -6,11 +6,15 @@ const MailboxList = ({ mailboxes }) => {
     <>
       <h2>Mailbox List</h2>
       <ul>
-        {/* {mailboxes.map((currentBox) => (
-          <li key={currentBox._id}>
-            <Link to={`/mailbox/${currentBox._id}`}>{currentBox._id}</Link>
+        {mailboxes.map((currentBox) => (
+          <li key={currentBox.mailboxId}>
+            <div className="mail-box">
+              <Link to={`/mailboxes/${currentBox.mailboxId}`}>
+                Mailbox {currentBox.mailboxId}
+              </Link>
+            </div>
           </li>
-        ))} */}
+        ))}
       </ul>
     </>
   );

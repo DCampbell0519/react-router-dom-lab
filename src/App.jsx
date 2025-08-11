@@ -6,13 +6,14 @@ import MailboxList from './components/MailboxList/MailboxList.jsx'
 import NavBar from './components/NavBar/NavBar.jsx'
 import './App.css'
 
+
 function App() {
 
   const [mailboxes, setMailboxes] = useState([])
   const addBox = (newMailbox) => {
-    newMailbox.boxId = mailboxes.length + 1;
+    newMailbox.mailboxId = mailboxes.length + 1;
     setMailboxes([ ...mailboxes, newMailbox ])
-    console.log(newMailbox)
+    // console.log(newMailbox)
   }
 
   return (
