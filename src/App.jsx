@@ -10,19 +10,20 @@ function App() {
 
   const [mailboxes, setMailboxes] = useState([])
   const addBox = (newMailbox) => {
-    newMailbox._id = mailboxes.length + 1;
+    newMailbox.boxId = mailboxes.length + 1;
     setMailboxes([ ...mailboxes, newMailbox ])
+    console.log(newMailbox)
   }
 
   return (
     <>
-      <h1>Mailbox</h1>
       <NavBar />
       <Routes>
         <Route path='/' element={<main><h1>Post Office</h1></main>}></Route>
-        <Route path='/mailboxes' element={<MailboxList />}></Route>
-        <Route path='/new-mailbox' element={<MailboxForm />}></Route>
-        <Route path='/mailboxes/:mailboxId' element={<MailboxDetails />}></Route>
+        <Route path='/mailboxes' element={<MailboxList mailboxes={mailboxes}/>}></Route>
+        <Route path='/new-mailbox' element={<MailboxForm addBox={addBox}/>}></Route>
+        <Route path='/mailboxes/:mailboxId' element={<MailboxDetails mailboxes={mailboxes}/>}></Route>
+        <Route path='*' element={<h2>404 This Mailbox does not exist</h2>}></Route>
       </Routes>
     </>
   )
