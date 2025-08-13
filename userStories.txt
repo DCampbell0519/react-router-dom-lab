@@ -21,3 +21,16 @@ As a user, when viewing the ‘Mailboxes’ list page, I want to be able to clic
 As a user, when viewing the details page, I should see details about a specific mailbox. The details should include the box number (_id), the name of the box owner, and the box size.
 
 As a user, I should see the message ‘Mailbox Not Found!’ if I navigate to the details page for a mailbox that does not exist.
+
+/////////////
+LEVEL UP
+/////////////
+As a user, I want to be able to send letters to specific mailboxes.
+
+As a user, I should be able to click on a ‘New Letter’ link in the nav bar. Doing so should navigate me to a ‘New Letter’ page.
+
+As a user, when viewing the ‘New Letter’ page, I should see a <form> with a <select> menu for the box number (_id) that I wish to send a letter to. The <select> menu should have options for all existing mailboxes. The <form> should also have an <input> for the recipient name, and <textarea> for my message.
+
+As a user, when I submit a new letter, I should be redirected to the ‘MailboxDetails’ page of the respective mailbox.
+
+As a user, when viewing the ‘MailboxDetails’ page, I should see a list of all the letters that have been send to that mailbox.
