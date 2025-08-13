@@ -8,7 +8,7 @@ const initialState = {
   message: "",
 };
 
-const LetterForm = ({ mailboxes, letters, addLetter }) => {
+const LetterForm = ({ mailboxes, addLetter }) => {
   const navigate = useNavigate();
 
   const [letterData, setLetterData] = useState(initialState);
@@ -38,7 +38,7 @@ const LetterForm = ({ mailboxes, letters, addLetter }) => {
         </select>
 
         <label htmlFor="recipient">Recipient:</label>
-        <input type="text" name="recipient" id="recipient" value={letterData.recipient} onChange={handleChange} />
+        <input type="text" name="recipient" id="recipient" value={letterData.recipient} onChange={handleChange} placeholder='Dear John,'/>
 
         <label htmlFor="message">Message:</label>
         <textarea name="message" id="message" rows={5} cols={40} value={letterData.message} onChange={handleChange} ></textarea>

@@ -32,8 +32,8 @@ function App() {
         <Route path='/' element={<main><h1>Post Office</h1></main>}></Route>
         <Route path='/mailboxes' element={<MailboxList mailboxes={mailboxes}/>}></Route>
         <Route path='/new-mailbox' element={<MailboxForm addBox={addBox}/>}></Route>
-        <Route path='/new-letter' element={<LetterForm mailboxes={mailboxes} letters={letters} addLetter={addLetter}/>}></Route>
-        <Route path='/mailboxes/:mailboxId' element={<MailboxDetails mailboxes={mailboxes}/>}></Route>
+        <Route path='/new-letter' element={<LetterForm mailboxes={mailboxes} addLetter={addLetter}/>}></Route>
+        <Route path='/mailboxes/:mailboxId' element={<MailboxDetails mailboxes={mailboxes} letters={letters}/>}></Route>
         <Route path='*' element={<h2>404 This Mailbox does not exist</h2>}></Route>
       </Routes>
     </>

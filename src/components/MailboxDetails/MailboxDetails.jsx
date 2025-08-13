@@ -1,10 +1,11 @@
 import React from "react";
 import { useParams } from "react-router";
 
-const MailboxDetails = ({ mailboxes }) => {
+const MailboxDetails = ({ mailboxes, letters }) => {
   const { mailboxId } = useParams();
   console.log("URL Params:", mailboxId);
   console.log({ mailboxes });
+  console.log('Letters:', letters)
 
   const selectedBox = mailboxes.find((mailbox) => {
     return mailbox.mailboxId === Number(mailboxId);
@@ -24,6 +25,15 @@ const MailboxDetails = ({ mailboxes }) => {
           <dt>Box Size: {selectedBox.boxSize}</dt>
           <dt>Box ID: {selectedBox.mailboxId}</dt>
         </dl>
+      </div>
+      <div className='letter-display'>
+        <h2>Letters:</h2>
+        {letters.map((letter) => (
+          <div key={letter.mailboxId}>
+            <p>{letter.recipient}</p>
+            <p>{letter.message}</p>
+          </div>
+        ))}
       </div>
     </>
   );
