@@ -29,7 +29,7 @@ const MailboxDetails = ({ mailboxes, letters }) => {
       <div className='letter-display'>
         <h2>Letters:</h2>
         {letters.map((letter) => (
-          <div key={letter.mailboxId}>
+          <div style={{ border: '3px solid black', margin: '20px', width: '60%' }}key={letter.mailboxId}>
             <p>{letter.recipient}</p>
             <p>{letter.message}</p>
           </div>

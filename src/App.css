@@ -89,3 +89,8 @@ textarea {
 button {
   background-color: #535bf2;
 }
+
+.letter-display, .mail-box {
+  display: flexbox;
+  text-align: left;
+}

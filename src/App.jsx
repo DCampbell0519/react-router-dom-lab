@@ -7,7 +7,6 @@ import NavBar from './components/NavBar/NavBar.jsx'
 import LetterForm from './components/LetterForm/LetterForm.jsx'
 import './App.css'
 
-
 function App() {
 
   const [mailboxes, setMailboxes] = useState([])
@@ -22,10 +21,7 @@ function App() {
     setLetters([ ...letters, newLetter ]);
   };
 
-  
-  
-
-  return (
+    return (
     <>
       <NavBar />
       <Routes>
